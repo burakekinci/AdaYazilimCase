@@ -11,6 +11,8 @@ namespace Services.Concrete
             _reservationServiceLazy = new Lazy<IReservationService>(() => new ReservationService());
         }
 
-        public IReservationService ReservationServiceLazy => _reservationServiceLazy.Value;
+        public IReservationService ReservationService => _reservationServiceLazy.Value;
+
+
     }
 }
